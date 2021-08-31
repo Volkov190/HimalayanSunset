@@ -1,0 +1,31 @@
+$active_color: #2675E1
+    
+.page-button
+    // border: 1px solid aqua
+    display: flex
+    justify-content: space-between
+    // flex-basis: 70px
+    // flex-shrink: 100
+    // margin-right: -3%
+    align-items: center
+    // overflow: 
+    // align-contet: flex-start
+    box-sizing: content-box
+    // padding-right: 1%
+    color: #6E7178
+    // width: 100%
+    // margin-right: -11%  
+    .page-button__icon
+        margin-right: 8px
+    .page-button__text
+        font-weight: 500
+        font-size: 14px
+        line-height: 20px
+        letter-spacing: 0.015em
+        margin-bottom: 3px
+        // margin-left: -11%
+    &_active
+        color: $active_color
+        border-bottom: 3px solid $active_color
+        padding-top: 3px
+            
