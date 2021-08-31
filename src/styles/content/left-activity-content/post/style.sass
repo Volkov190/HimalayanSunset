@@ -1,0 +1,58 @@
+.post
+    padding: 16px
+    border: 1px solid #DDE0E6
+    background-color: #FFF
+    .post__header
+        display: flex
+        margin-bottom: 16px
+        font-weight: 400
+        height: 20px
+    &__title
+        line-height: 20px
+    &__timer
+        display: flex
+        margin-left: auto
+        // border: 1px solid aqua
+        // padding: 4px 0
+        &-icon
+            color: green
+            padding: 2px 0
+            // height: 16px
+        &-minimize-icon
+            padding: 4px 0
+            // height: 16px
+    &__timer-text
+        margin-left: 19px
+        margin-right: 16px
+        // margin-top: 3px
+        line-height: 20px
+    &__photo
+        width: 100%
+        img
+            width: 100%
+    &__author
+        color: #2375E1
+    &__comment-header
+        display: flex
+        margin: 16px 0
+        &-icon
+            margin-right: 8px
+            padding: 4px 0
+    &__footer
+        margin-top: 20px
+    &__footer,
+    &__read-button,
+    &__watch
+        display: flex
+    &__watch
+        margin-right: 1.83%
+        &-icon
+            margin-right: 8px
+            padding-top: 2px
+    &__read-button
+        margin-left: auto
+        &-icon
+            margin-left: 8px
+            padding-top: 3px
+
+@import './comment/style'

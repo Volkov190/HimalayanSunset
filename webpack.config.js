@@ -12,6 +12,7 @@ module.exports = {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        assetModuleFilename: 'img/[hash].[ext]',
     },
     plugins: [
         new HtmlWebpackPlugin({template: './index.html'}),
@@ -20,9 +21,17 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.html$/,
+                loader: 'html-loader'
+            },
+            {
                 test: /\.sass$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            }
         ]
     },
     devServer: {
