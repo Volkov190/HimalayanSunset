@@ -27,23 +27,25 @@
             </div>
         </div>
         <div class="header__bottom">
-            <div class="header__page-button header__page-button_left page-button page-button_active">
-                <div class="page-button__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-                    </svg>
-                </div>
-                <div class="page-button__text">Activity</div>
-            </div>
-            <div class="header__page-button header__page-button_left page-button">
+            <!-- <a href="#/" style="display:block"> -->
+            <a href="#/" class="header__page-button header__page-button_left page-button">
+                    <div class="page-button__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </div>
+                    <div class="page-button__text">Activity</div>
+                </a>
+            <!-- </a> -->
+            <a href="#/map/" class="header__page-button header__page-button_left page-button">
                 <div class="page-button__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
                         <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                     </svg>
                 </div>
                 <div class="page-button__text">Map</div>
-            </div>
-            <div class="header__page-button header__page-button_left page-button">
+            </a>
+            <a href="#/timer/" class="header__page-button header__page-button_left page-button">
                 <div class="page-button__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
                         <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
@@ -51,7 +53,7 @@
                     </svg>
                 </div>
                 <div class="page-button__text">Time</div>
-            </div>
+            </a>
             <div class="header__page-button header__page-button_right page-button">
                 <div class="page-button__icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark" viewBox="0 0 16 16">
@@ -92,7 +94,7 @@
         </div>
     </header>
     <main class="content">
-        <div class="activity content__activity">
+        <div data-content="#/" class="activity content__activity content_inactive">
             <div class="activity__content_left left-activity-content">
                 <div class="left-activity-content__post post">
                     <div class="post__header">
@@ -337,7 +339,7 @@
                 </div>
             </div>
         </div>
-        <div class="content__map map">
+        <div data-content="#/map/" class="content__map map content_inactive">
             <div class="map__header">
                 <div class="map__title">Basic map</div>
                 <div class="map__minimize-icon">
@@ -350,7 +352,7 @@
                 <img src="./img/image 2022map.jpg" alt="map">
             </div>
         </div>
-        <div class="content__timer timer">
+        <div data-content="#/timer/" class="content__timer timer content_inactive">
             <div class="timer__header">
                 <div class="timer__title">Timer</div>
                 <div class="timer__minimize-icon">
