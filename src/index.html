@@ -348,9 +348,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="map__main-box">
-                <img src="./img/image 2022map.jpg" alt="map">
-            </div>
+            <div class="map__main-box" id="map"></div>
         </div>
         <div data-content="#/timer/" class="content__timer timer content_inactive">
             <div class="timer__header">
@@ -364,5 +362,18 @@
             <div class="timer__main-box">00:00:00</div>
         </div>
     </main>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full&skin=light"></script>
+    <script type="text/javascript">
+        let map;
+    
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [55.927601, 37.793106],
+                zoom: 13
+            });
+
+            DG.marker([55.927601, 37.793106]).addTo(map).bindPopup('Тут такому не научат');
+        });
+    </script>
 </body>
 </html>
