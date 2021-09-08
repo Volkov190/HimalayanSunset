@@ -1,7 +1,16 @@
+$duration: 0.7s
+    
 .post
     padding: 16px
     border: 1px solid #DDE0E6
     background-color: #FFF
+    // transition-duration: 2s
+    overflow: hidden
+    transition: max-height $duration
+    max-height: 1000px
+    // &:hover
+    &_minimal
+        max-height: 20px
     .post__header
         display: flex
         margin-bottom: 16px
@@ -20,6 +29,13 @@
             // height: 16px
         &-minimize-icon
             padding: 4px 0
+            cursor: pointer
+            transition-duration: $duration
+            &_closed
+                transform: rotateX(180deg)
+            // &:hover
+                // animation: minimize-icon 1s
+                // animation-fill-mode: forwards
             // height: 16px
     &__timer-text
         margin-left: 19px
@@ -58,8 +74,15 @@
         .post__timer-icon,
         .post__timer-text,
         .post__main
-            display: none
+            //display: none
         .post__header
-            margin: 0
+            // margin: 0
+
+@keyframes minimize-icon
+    0%
+        transform: rotateX(0deg)        
+    100%
+        transform: rotateX(180deg)
+        
 
 @import './comment/style'
