@@ -4,6 +4,8 @@ $borderColor: #DDE0E6
     border: 1px solid $borderColor
     background-color: #FFF
     // padding-top: 12px
+    // transition-property: all
+    // transition-duration: 1s
     // padding-bottom: 12px
     // &__list
     &__header,
@@ -53,4 +55,24 @@ $borderColor: #DDE0E6
             background-color: orange
         &_connections-bottom
             background-color: indigo
+    &__header
+        @media (max-width: 768px)
+            transition-property: all
+            transition-duration: 1s
+            top: 0px
+            left: 50vw
+    &__header_closed
+        @media (max-width: 768px)
+            position: fixed
+            height: 30px
+            background-color: #fff
+            border: 1px solid #DDE0E6
+            border-top: none
+            // transform: rotate(90deg) translateX(200px) translateY(40vw)
+            transform: rotate(90deg)
+            top: 200px
+            left: -87px
+            padding: 0
+            width: 120px
+            padding: 0 10px
         

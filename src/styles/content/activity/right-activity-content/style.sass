@@ -1,10 +1,40 @@
-.right-activity-content
-    width: 26.82%
-    &__navigation,
-    &__profile
-        margin-bottom: 24px
-    
 @import './right-menu-header/style'
 @import './profile/style'
 @import './navigation/style'
 @import './message/style'
+
+.right-activity-content
+    &__navigation,
+    &__profile
+        margin-bottom: 24px
+    // &__profile,
+    &__message
+        @media (max-width: 768px) 
+            display: none
+    &__navigation
+        @media (max-width: 768px)
+            height: 100%
+            // width: 70%
+            width: 356px
+            margin-left: 0
+            margin-right: 0
+            opacity: 100
+            // transition-duration: 1s
+    &__profile
+        @media ( max-width: 768px )
+            width: 30%
+            // opacity: 0
+            margin: 0
+            background-color: rgba(1, 1, 1, 0.5)
+            transition-duration: 1s
+            border: none
+            transition-property: background-color
+            flex: 2 1
+            & div
+                display: none
+            &_closed
+                // display: none
+                transition-property: none
+                background-color: rgba(1, 1, 1, 0)
+                // width: 0
+            
