@@ -1,0 +1,24 @@
+.menu-button
+    display: flex
+    // text-decoration: none
+    align-items: center
+    height: 26.5px
+    cursor: pointer
+    padding: 10px 2%
+    margin: 0
+    color: #6E7178
+    border-bottom: 1px solid #DDE0E6
+    &:hover
+        // color: #2E6571
+    &__icon
+        margin-right: 8px
+        height: 16px
+    &__text
+        font-size: 20px
+        line-height: 26.5px
+        font-weight: 500
+    &__minimize-icon
+        margin-left: auto
+        transition-duration: 1s
+        &_closed
+            transform: rotateX(180deg)

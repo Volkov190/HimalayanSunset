@@ -1,0 +1,78 @@
+$borderColor: #DDE0E6
+    
+.navigation
+    border: 1px solid $borderColor
+    background-color: #FFF
+    // padding-top: 12px
+    // transition-property: all
+    // transition-duration: 1s
+    // padding-bottom: 12px
+    // &__list
+    &__header,
+    &__element
+        padding-left: 6.82%
+        padding-right: 6.82%
+    // &__header
+    //     display: flex
+    //     height: 48px
+    //     align-items: center
+    //     border-bottom: 1px solid $borderColor
+    // &__title
+    //     line-height: 48px
+    //     color: #000
+    // &__minimize-icon
+    //     margin-left: auto
+    //     color: #6E7178
+    &__list
+        .navigation__element
+            // padding-left: 6.82%
+            // padding-right: 6.82%
+        &_top
+            border-bottom: 1px solid $borderColor
+    &__element
+        display: flex
+        height: 50px
+        align-items: center
+    &__icon
+        height: 17px
+        margin-right: 16px
+        color: #6E7178
+    &__text
+        line-height: 50px
+        color: #2D2F33
+    &__value
+        margin-left: auto
+        &_balance
+            color: #A1A5AE
+            font-size: 14px
+        &_connections-top,
+        &_connections-bottom
+            font-size: 13px
+            border-radius: 50%
+            padding: 0 4px
+            color: #FFF
+        &_connections-top
+            background-color: orange
+        &_connections-bottom
+            background-color: indigo
+    &__header
+        @media (max-width: 768px)
+            transition-property: all
+            transition-duration: 1s
+            top: 0px
+            left: 50vw
+    &__header_closed
+        @media (max-width: 768px)
+            position: fixed
+            height: 30px
+            background-color: #fff
+            border: 1px solid #DDE0E6
+            border-top: none
+            // transform: rotate(90deg) translateX(200px) translateY(40vw)
+            transform: rotate(90deg)
+            top: 200px
+            left: -87px
+            padding: 0
+            width: 120px
+            padding: 0 10px
+        

@@ -1,0 +1,96 @@
+$duration: 0.7s
+$mobile-size: 476px    
+
+.post
+    padding: 16px
+    border: 1px solid #DDE0E6
+    background-color: #FFF
+    // transition-duration: 2s
+    overflow: hidden
+    transition: max-height $duration
+    max-height: 1000px
+    // &:hover
+    &_minimal
+        max-height: 20px
+    .post__header
+        display: flex
+        margin-bottom: 16px
+        font-weight: 400
+        height: 20px
+        // @media (max-width: $mobile-size)
+        //     display: block
+        //     height: auto
+    &__title
+        line-height: 20px
+    &__timer
+        display: flex
+        margin-left: auto
+        @media ( max-width: $mobile-size)
+            display: none         
+        // border: 1px solid aqua
+        // padding: 4px 0
+        &-icon
+            color: green
+            padding: 2px 0
+            // height: 16px
+        &-minimize-icon
+            padding: 4px 0
+            cursor: pointer
+            transition-duration: $duration
+            &_closed
+                transform: rotateX(180deg)
+            // &:hover
+                // animation: minimize-icon 1s
+                // animation-fill-mode: forwards
+            // height: 16px
+    &__timer-text
+        margin-left: 19px
+        margin-right: 16px
+        // margin-top: 3px
+        line-height: 20px
+    &__photo
+        width: 100%
+        img
+            width: 100%
+    &__author
+        color: #2375E1
+    &__comment-header
+        display: flex
+        margin: 16px 0
+        &-icon
+            margin-right: 8px
+            padding: 4px 0
+    &__footer
+        margin-top: 20px
+    &__footer,
+    &__read-button,
+    &__watch
+        display: flex
+    &__watch
+        margin-right: 1.83%
+        &-icon
+            margin-right: 8px
+            padding-top: 2px
+    &__read-button
+        margin-left: auto
+        &-icon
+            margin-left: 8px
+            padding-top: 3px
+    &_minimal
+        @media (max-width: $mobile-size)
+            max-height: 1000px
+        .post__timer-icon,
+        .post__timer-text,
+        .post__main
+            //display: none
+        .post__header
+            // margin: 0
+
+@keyframes minimize-icon
+    0%
+        transform: rotateX(0deg)        
+    100%
+        transform: rotateX(180deg)
+        
+
+@import './comment/style'
