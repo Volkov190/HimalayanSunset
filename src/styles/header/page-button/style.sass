@@ -1,4 +1,6 @@
+
 $active_color: #2675E1
+$mobile-size: 476px
     
 .page-button
     // border: 1px solid aqua
@@ -16,6 +18,8 @@ $active_color: #2675E1
     color: #6E7178
     // width: 100%
     // margin-right: -11%  
+    @media (max-width: $mobile-size)
+        justify-content: start
     .page-button__icon
         margin-right: 8px
     .page-button__text
@@ -24,9 +28,14 @@ $active_color: #2675E1
         line-height: 20px
         letter-spacing: 0.015em
         margin-bottom: 3px
+        @media (max-width: $mobile-size)
+            font-size: 20px
         // margin-left: -11%
+    &:hover,
     &_active
         color: $active_color
         border-bottom: 3px solid $active_color
         padding-top: 3px
+        // @media (max-width: 475px) 
+        //     border-bottom: 1px solid aqua
             

@@ -1,5 +1,6 @@
 $duration: 0.7s
-    
+$mobile-size: 476px    
+
 .post
     padding: 16px
     border: 1px solid #DDE0E6
@@ -16,11 +17,16 @@ $duration: 0.7s
         margin-bottom: 16px
         font-weight: 400
         height: 20px
+        // @media (max-width: $mobile-size)
+        //     display: block
+        //     height: auto
     &__title
         line-height: 20px
     &__timer
         display: flex
         margin-left: auto
+        @media ( max-width: $mobile-size)
+            display: none         
         // border: 1px solid aqua
         // padding: 4px 0
         &-icon
@@ -71,6 +77,8 @@ $duration: 0.7s
             margin-left: 8px
             padding-top: 3px
     &_minimal
+        @media (max-width: $mobile-size)
+            max-height: 1000px
         .post__timer-icon,
         .post__timer-text,
         .post__main
